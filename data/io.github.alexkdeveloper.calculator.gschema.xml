@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="calculator">
+	<schema id="io.github.alexkdeveloper.calculator" path="/io/github/alexkdeveloper/calculator/">
+	   <key name="width" type="i">
+      <default>600</default>
+    </key>
+    <key name="height" type="i">
+      <default>300</default>
+    </key>
+    <key name="is-maximized" type="b">
+      <default>false</default>
+    </key>
+    <key name="is-fullscreen" type="b">
+      <default>false</default>
+    </key>
+	</schema>
+</schemalist>

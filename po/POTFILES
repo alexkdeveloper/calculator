@@ -1,0 +1,6 @@
+data/io.github.alexkdeveloper.calculator.desktop.in
+data/io.github.alexkdeveloper.calculator.metainfo.xml.in
+data/io.github.alexkdeveloper.calculator.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

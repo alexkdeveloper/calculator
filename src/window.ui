@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.16.0 -->
+<interface>
+  <!-- interface-name window.ui -->
+  <requires lib="Adw" version="1.0"/>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="gio" version="2.0"/>
+  <requires lib="libadwaita" version="1.4"/>
+  <template class="CalculatorWindow" parent="AdwApplicationWindow">
+    <property name="content">
+      <object class="AdwToolbarView">
+      <child>
+        <object class="AdwToastOverlay" id="overlay">
+        <child>
+          <object class="GtkBox">
+            <property name="margin-end">6</property>
+            <property name="margin-start">6</property>
+            <property name="margin-bottom">6</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">6</property>
+            <child>
+              <object class="GtkBox">
+                <property name="spacing">6</property>
+                <child>
+                  <object class="GtkEntry" id="entry">
+                    <property name="hexpand">True</property>
+                    <property name="secondary-icon-name">edit-clear-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="calculate_button">
+                    <property name="label" translatable="yes">CALCULATE</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <child>
+                  <object class="GtkTextView" id="text_view">
+                    <property name="editable">False</property>
+                    <property name="vexpand">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+           </object>
+          </child>
+         </object>
+        </child>
+        <child type="top">
+          <object class="AdwHeaderBar" id="header_bar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">primary_menu</property>
+                <property name="primary">True</property>
+                <property name="tooltip-text" translatable="yes">Menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+    <property name="title">Calculator</property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label" translatable="yes">_About Calculator</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

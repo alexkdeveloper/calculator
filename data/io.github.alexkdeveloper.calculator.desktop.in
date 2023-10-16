@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Calculator
+Comment=String calculator for Linux
+Exec=calculator
+Icon=io.github.alexkdeveloper.calculator
+Terminal=false
+Type=Application
+Categories=GTK;Utility;
+StartupNotify=true
