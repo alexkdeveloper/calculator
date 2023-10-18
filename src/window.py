@@ -49,6 +49,7 @@ class CalculatorWindow(Adw.ApplicationWindow):
     def on_calculate_clicked(self, widget):
         if len(self.entry.get_text().strip()) == 0:
            self.set_toast(_("Enter an arithmetic expression"))
+           self.entry.grab_focus()
            return
 
         problem = self.entry.get_text()
@@ -57,6 +58,7 @@ class CalculatorWindow(Adw.ApplicationWindow):
            result = SolveMathProblem(problem)
         except ZeroDivisionError:
              self.set_toast(_("Division by zero!"))
+             self.entry.grab_focus()
              return
 
         self.text += problem + "=" + str(result) + "\n"

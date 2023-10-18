@@ -26,6 +26,7 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Gio, Adw
 from .window import CalculatorWindow
 
+translator_credits = _("translator-credits")
 
 class CalculatorApplication(Adw.Application):
     """The main application singleton class."""
@@ -52,10 +53,13 @@ class CalculatorApplication(Adw.Application):
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Calculator',
                                 application_icon='io.github.alexkdeveloper.calculator',
-                                developer_name='Alex K',
+                                developer_name='Alex Kryuchkov',
                                 version='1.0.0',
-                                developers=['Alex K'],
-                                copyright='© 2023 Alex K')
+                                developers=['Alex Kryuchkov'],
+                                translator_credits=translator_credits,
+                                website='https://github.com/alexkdeveloper/calculator',
+                                copyright='© 2023 Alex Kryuchkov',
+                                license_type=Gtk.License.GPL_3_0)
         about.present()
 
     def create_action(self, name, callback, shortcuts=None):
