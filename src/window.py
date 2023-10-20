@@ -19,6 +19,7 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
+from gi.repository import Gdk
 from gi.repository import Gio
 from StringCalculator import SolveMathProblem
 
@@ -39,12 +40,27 @@ class CalculatorWindow(Adw.ApplicationWindow):
         self.calculate_button.connect("clicked", self.on_calculate_clicked)
         self.entry.connect("icon-press", self.on_clear_clicked)
 
-        self.settings = Gio.Settings(schema_id="io.github.alexkdeveloper.calculator")
+        settings = Gio.Settings(schema_id="io.github.alexkdeveloper.calculator")
 
-        self.settings.bind("width", self, "default-width", Gio.SettingsBindFlags.DEFAULT)
-        self.settings.bind("height", self, "default-height", Gio.SettingsBindFlags.DEFAULT)
-        self.settings.bind("is-maximized", self, "maximized", Gio.SettingsBindFlags.DEFAULT)
-        self.settings.bind("is-fullscreen", self, "fullscreened", Gio.SettingsBindFlags.DEFAULT)
+        settings.bind("width", self, "default-width", Gio.SettingsBindFlags.DEFAULT)
+        settings.bind("height", self, "default-height", Gio.SettingsBindFlags.DEFAULT)
+        settings.bind("is-maximized", self, "maximized", Gio.SettingsBindFlags.DEFAULT)
+        settings.bind("is-fullscreen", self, "fullscreened", Gio.SettingsBindFlags.DEFAULT)
+
+        event_controller = Gtk.EventControllerKey.new()
+        event_controller.connect("key-released", self.on_key_released)
+
+        self.add_controller(event_controller)
+
+        css_provider = Gtk.CssProvider()
+        css_provider.load_from_string('.text_size {font-size: 16px}')
+        Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+
+        self.text_view.set_css_classes(["text_size"])
+
+    def on_key_released(self, event, keyval, keycode, state):
+        if keyval == Gdk.KEY_Return:
+           self.on_calculate_clicked(self)
 
     def on_calculate_clicked(self, widget):
         if len(self.entry.get_text().strip()) == 0:
