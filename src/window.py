@@ -53,9 +53,10 @@ class CalculatorWindow(Adw.ApplicationWindow):
         self.add_controller(event_controller)
 
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_string('.text_size {font-size: 16px}')
+        css_provider.load_from_string('.text_size {font-size: 16px;}')
         Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
+        self.entry.set_css_classes(["text_size"])
         self.text_view.set_css_classes(["text_size"])
 
     def on_key_released(self, event, keyval, keycode, state):
