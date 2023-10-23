@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-10-18 18:56+0800\n"
-"PO-Revision-Date: 2023-10-18 18:57+0800\n"
+"POT-Creation-Date: 2023-10-23 20:41+0800\n"
+"PO-Revision-Date: 2023-10-23 20:43+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -21,26 +21,30 @@ msgstr ""
 msgid "translator-credits"
 msgstr "Alex Kryuchkov"
 
-#: window.py:51
+#: window.py:68
 msgid "Enter an arithmetic expression"
 msgstr "Введите арифметическое выражение"
 
-#: window.py:59
+#: window.py:77
 msgid "Division by zero!"
 msgstr "Деление на ноль!"
 
-#: window.ui:32
+#: window.ui:40
 msgid "CALCULATE"
 msgstr "ВЫЧИСЛИТЬ"
 
-#: window.ui:58
+#: window.ui:66
 msgid "Menu"
 msgstr "Меню"
 
-#: window.ui:71
+#: window.ui:79
 msgid "_Keyboard Shortcuts"
 msgstr "_Комбинации клавиш"
 
-#: window.ui:75
+#: window.ui:83
 msgid "_About Calculator"
 msgstr "_О Программе"
+
+#: window.ui:86
+msgid "_Quit"
+msgstr "_Выход"
