@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2024 Alex Kryuchkov <kryuchkovalex19830609@gmail.com> -->
 <component type="desktop">
-	<id>io.github.alexkdeveloper.calculator.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
-	<description>
-	  <p>No description</p>
-	</description>
+  <id>io.github.alexkdeveloper.calculator</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Calculator</name>
+  <summary>A simple string calculator</summary>
+  <provides>
+    <binary>io.github.alexkdeveloper.calculator</binary>
+  </provides>
+  <translation type="gettext">io.github.alexkdeveloper.calculator</translation>
+  <launchable type="desktop-id">io.github.alexkdeveloper.calculator.desktop</launchable>
+  <developer_name>Alex Kryuchkov</developer_name>
+  <url type="homepage">https://github.com/alexkdeveloper/calculator</url>
+  <url type="bugtracker">https://github.com/alexkdeveloper/calculator/issues</url>
+  <url type="vcs-browser">https://github.com/alexkdeveloper/calculator</url>
+  <url type="translate">https://github.com/alexkdeveloper/calculator/tree/main/po</url>
+  <url type="help">https://github.com/alexkdeveloper/calculator/issues</url>
+  <screenshots>
+    <screenshot type="default">
+    <image>https://raw.githubusercontent.com/alexkdeveloper/calculator/main/data/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <description>
+    <p>A simple string calculator that can perform addition, subtraction, multiplication, division, exponentiation and root extraction, taking into account the order of actions.</p>
+  </description>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.0.0" date="2024-02-07">
+    <description translatable="no">
+      <ul>
+        <li>Initial release</li>
+      </ul>
+    </description>
+    </release>
+  </releases>
 </component>
