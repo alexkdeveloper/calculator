@@ -5,4 +5,4 @@ The application uses the [StringCalculator library](https://pypi.org/project/Str
 
 ![screenshot.png](/data/screenshot.png)
 
-It is recommended to use the GNOME Builder IDE to build the application.
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="200" alt="Download on Flathub">](https://flathub.org/apps/details/io.github.alexkdeveloper.calculator)
