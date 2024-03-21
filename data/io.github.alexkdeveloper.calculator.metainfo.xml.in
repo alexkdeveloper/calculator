@@ -34,5 +34,12 @@
       </ul>
     </description>
     </release>
+    <release version="1.0.1" date="2024-03-21">
+    <description translatable="no">
+      <ul>
+        <li>Updated to GNOME Platform version 46</li>
+      </ul>
+    </description>
+    </release>
   </releases>
 </component>
