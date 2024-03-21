@@ -27,17 +27,17 @@
   </description>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.0.0" date="2024-02-06">
-    <description translatable="no">
-      <ul>
-        <li>Initial release</li>
-      </ul>
-    </description>
-    </release>
     <release version="1.0.1" date="2024-03-21">
     <description translatable="no">
       <ul>
         <li>Updated to GNOME Platform version 46</li>
+      </ul>
+    </description>
+    </release>
+    <release version="1.0.0" date="2024-02-06">
+    <description translatable="no">
+      <ul>
+        <li>Initial release</li>
       </ul>
     </description>
     </release>
