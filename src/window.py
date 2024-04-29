@@ -17,6 +17,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import re
+
 from gi.repository import Adw
 from gi.repository import Gtk
 from gi.repository import Gdk
@@ -69,7 +71,7 @@ class CalculatorWindow(Adw.ApplicationWindow):
            self.entry.grab_focus()
            return
 
-        problem = self.entry.get_text()
+        problem = re.sub(r"\s+", "", self.entry.get_text(), flags=re.UNICODE)
 
         try:
            result = SolveMathProblem(problem)
