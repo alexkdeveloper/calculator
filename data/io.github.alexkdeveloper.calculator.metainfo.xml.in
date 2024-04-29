@@ -12,6 +12,9 @@
   <translation type="gettext">io.github.alexkdeveloper.calculator</translation>
   <launchable type="desktop-id">io.github.alexkdeveloper.calculator.desktop</launchable>
   <developer_name>Alex Kryuchkov</developer_name>
+  <developer id="io.github.alexkdeveloper">
+    <name translate="no">Alex Kryuchkov</name>
+  </developer>
   <url type="homepage">https://github.com/alexkdeveloper/calculator</url>
   <url type="bugtracker">https://github.com/alexkdeveloper/calculator/issues</url>
   <url type="vcs-browser">https://github.com/alexkdeveloper/calculator</url>
@@ -27,15 +30,22 @@
   </description>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="1.0.2" date="2024-04-29">
+    <description translate="no">
+      <ul>
+        <li>Fixed a calculation error due to spaces in the arithmetic expression</li>
+      </ul>
+    </description>
+    </release>
     <release version="1.0.1" date="2024-03-21">
-    <description translatable="no">
+    <description translate="no">
       <ul>
         <li>Updated to GNOME Platform version 46</li>
       </ul>
     </description>
     </release>
     <release version="1.0.0" date="2024-02-06">
-    <description translatable="no">
+    <description translate="no">
       <ul>
         <li>Initial release</li>
       </ul>
