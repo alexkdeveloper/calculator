@@ -62,7 +62,7 @@ class CalculatorWindow(Adw.ApplicationWindow):
         self.text_view.set_css_classes(["text_size"])
 
     def on_key_released(self, event, keyval, keycode, state):
-        if keyval == Gdk.KEY_Return:
+        if keyval == Gdk.KEY_Return or keyval == Gdk.KEY_KP_Enter:
            self.on_calculate_clicked(self)
 
     def on_calculate_clicked(self, widget):
