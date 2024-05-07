@@ -30,6 +30,13 @@
   </description>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="1.0.4" date="2024-05-07">
+    <description translate="no">
+      <ul>
+        <li>Added the KP_Enter key to start the calculation</li>
+      </ul>
+    </description>
+    </release>
     <release version="1.0.3" date="2024-05-01">
     <description translate="no">
       <ul>
